@@ -19,9 +19,7 @@ public class Scoreboard {
     public void add(GameEntry ge) {
         int newScore = ge.getScore();
         if (numEntries < board.length) {
-            if (numEntries < board.length) {
-                numEntries++;
-            }
+            numEntries++;
             int j = numEntries - 1;
             while (j > 0 && newScore < board[j - 1].getScore()) {
                 board[j] = board[j - 1];
