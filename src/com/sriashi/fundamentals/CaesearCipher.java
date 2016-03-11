@@ -5,6 +5,7 @@ package com.sriashi.fundamentals;
  * 
  * Encoder: DEFGHIJKLMNOPQRSTUVWXYZABC
  * Decoder: XYZABCDEFGHIJKLMNOPQRSTUVW
+ * rotation: 3
  * 
  * @author ashimita
  *
@@ -42,13 +43,15 @@ public class CaesearCipher {
 
 	public static void main(String[] args) {
       CaesearCipher cipher = new CaesearCipher(3);
+      String message = "RIJU IS A GOOD MEOW MEOW!";
       System.out.println("Encryption code: "+new String(cipher.encoder));
       System.out.println("Decryption code: "+new String(cipher.decoder));
       System.out.println("**********");
-      String encrypted = cipher.encrypt("RIJU IS A GOOD MEOW MEOW!");
+      String encrypted = cipher.encrypt(message);
       System.out.println("Encrypted: "+encrypted);
+      
       String decrypted = cipher.decrypt(encrypted);
-      System.out.println("DEcrypted: "+decrypted);
+      System.out.println("Decrypted: "+decrypted);
 	}
 
 }
